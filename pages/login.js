@@ -1,7 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { AppButton,AppContainer, AppInput } from '../src/components';
+import {AppContainer} from '../src/components/AppContainerComponent';
+import {AppButton} from '../src/components/AppButtonComponent';
+import {AppInput} from '../src/components/AppInputComponent';
 
 const Login = props => {
   const router = useRouter();
