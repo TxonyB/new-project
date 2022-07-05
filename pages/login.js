@@ -12,8 +12,22 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import {useRouter} from 'next/router';
+import {AppButton, AppContainer, AppInput} from '../src/components';
+
+const Login = props => {
+  const router = useRouter ();
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleChangeName = (event) => {
+    setName(event.target.value);
+  }
 
 function Copyright(props) {
+  
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
@@ -124,4 +138,4 @@ export default function SignInSide() {
       </Grid>
     </ThemeProvider>
   );
-}
+}}
